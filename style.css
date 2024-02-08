@@ -1,0 +1,190 @@
+@font-face {
+    font-family: CustomFont;
+    src: url(Assests/Custom-Font/PocketMonk-15ze.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', sans-serif;
+    font-size: large;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:  100vh;
+    padding: 20px 30px;
+}
+body.img{
+    background-image: url("Assests/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar horizontally */
+    align-items: center;
+    flex-grow: 1; /* Allow the navbar to take up remaining space */
+}
+
+.navbar a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 0, 0, 0.744);
+    color: whitesmoke;
+}
+
+
+.alignment{
+    background-color:transparent;
+    border-style: none;
+    border-radius: 5%;
+    width: 420px;
+    padding: 40px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+}
+.text{
+    font-size: 50px;
+    text-align: center;
+    pointer-events: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+    animation: colorchange 20s infinite alternate;
+}
+@keyframes colorchange {
+    0% {
+      
+      color: red;
+    }
+    50% {
+      
+      color: crimson;
+    }
+    100% {
+      
+      color: tomato;
+    }
+  }
+  
+.i{
+    display: flex ;
+    border: none;
+    border-radius: 10px;
+    box-shadow:  6px 6px 5px rgba(0, 0, 0, 0.2);
+}
+.alignment span{
+    position: absolute;
+    font-size: 15px;
+    translate: 8px;
+    margin-top: 10px;
+    color: rgb(161, 111, 19);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    overflow: hidden;
+    pointer-events: none;
+}
+.alignment input:valid ~span,
+.alignment input:focus ~span{
+    color: black;
+    font-weight: 600;
+    font-size: 0.3cm;
+    margin-top: -6px;
+    transform: translate(-6px);
+    transition: .5s;
+}
+.entery{
+    width: 100%;
+    height: 40px;
+    border-style: hidden;
+    border-radius: 15px;
+    border: none;
+    outline:none;
+    background: transparent; 
+    color: black;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 200;
+    font-family: 'CustomFont', sans-serif;
+}
+input::placeholder{
+    color: black;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+.image{
+    width:55px;
+    height: 30px;
+    margin-top: 4px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.submit{
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: cadetblue;
+    color: aliceblue;
+    border-radius: 20px;
+    font-size: 17px;
+    margin-top: 15px;
+    font-weight: 400;
+    transition: background-color 1s , color 1s;
+}
+.submit{
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.submit:hover{
+    background-color:rgba(238, 36, 25, 0.977);
+    color: white;
+    cursor: pointer;
+}
+.submit:focus,
+.submit:active{
+    background-color:rgba(238, 36, 25, 0.977);
+    transition: none;
+}
+
+.pokemon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pokemon-img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    display: none; /* Initially hide the image */
+}
